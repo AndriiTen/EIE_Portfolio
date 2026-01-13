@@ -1,0 +1,16 @@
+schema {
+  query: Query
+}
+
+type Query {
+  EIE_Calculator(tickers_list: [String]): EIE_Result!
+}
+
+type EIE_Result{
+  success: Boolean,
+  error: String,
+  processedRecords: Int,
+  indicators_inserted: Int,
+  events_inserted: Int,
+  message: String
+}
